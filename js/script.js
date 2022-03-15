@@ -1,68 +1,44 @@
-"use strict";
+/* Задание на урок:
 
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
 
-// alert('Hello');
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
 
-// const result = confirm("Are you here?");
-// console.log(result);
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
 
-// const answer = prompt('Ввм есть 18?', '18');
-// console.log(answer + 5);
+Проверить, чтобы все работало без ошибок в консоли */
 
-// let number = 5;
-// const leftBorderWidth = 1;
+'use strict';
 
-// number = 10;
-// console.log(number);
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", '');
 
-// // const obj = {
-// //     a: 50 
-// // };
+const personalMovieDB = {
+    count : numberOfFilms,
+    movies: {},
+    actors: {},
+    genders: [],
+    privat: false
+};
 
-// // obj.a = 10;
+const a = prompt("Один из последних просмотренных фильмов?", ''),
+      b = +prompt("На сколько оцените его?", ''),
+      c = prompt("Один из последних просмотренных фильмов?", ''),
+      d = +prompt("На сколько оцените его?", '');  
 
-// // console.log(obj);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-
-// console.log(name);
-// var name = 'Ayndi';
-
-
-// const obj  = {
-//     name: 'Ayndi',
-//     age: 25,
-//     isMarried: true
-// };
-
-// // console.log(obj['name']);
-// console.log(obj.name);
-
-// let arr = ['plum.png', 'orange.jpg', 'apple.bmp'];
-// console.log(arr[1]);
-
-// const answers = [];
-
-// // answers[0] = prompt('Как ваше имя?', '');
-// // answers[1] = prompt('Как ваше фвмилия?', '');
-// // answers[2] = prompt('Как вам лет?', '');
-
-// console.log(typeof(answers));
-// console.log(typeof(null));
-
-
-//Интерполяция
-// const category = 'toys';
-// console.log(`https://someurl.com/${category}/5`);
-
-// const user = 'Ivan';
-// alert(`Hello, ${user}`);
-
-// let incr = 10,
-//     decr = 10;
-
-// // ++incr;
-// // --decr;
-
-// console.log(++incr);
-// console.log(--decr);
-
+console.log(personalMovieDB);
